@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+ 
+   
+   
+  <script type="text/javascript">
+//Program name: Semi Conductors
+//Purpose:Determining discounts for different departments.
+//Author: Syed Adib Muhtashim Ali
+//Date last modified: 2021/6/27
+
+      // Use prompt() method to ask user for values
+      //Declare Vairables
+	  
+    var choice1;
+	var choice2;
+	var amount;
+	var total;
+	var BR = "<br />";
+	// Use prompt() method to ask user for values
+	// Use prompt to store type of microprocessor
+    choice1 = prompt("Please enter the type of microprocessors: \n(1) 8-bit\n(2) 16-bit\n(3) 32-bit");
+	// Use prompt to store type of customer
+    choice2 = prompt("Please enter type of customer: \n(1) Industrial\n(2) Government\n(3) University");
+	// Use prompt to store amount
+    amount = prompt("Enter amount: ","$");
+    
+    
+       // Determining what kind of discount client qualifies for a free discount by using if-else conditions
+    total = amount;
+    if (amount < 50000) {		//determining the discount for under 50000 purchase.
+        if (choice2 == 1) {
+            amount = 0.95 * amount;		//determining the discount for industrial agencies
+        } else if (choice2 == 2) {
+            amount = 0.935 * amount;	//determining the discount for government agencies
+        }
+    } else {
+        if (amount < 100000) {				//determining the discount for under 100000 purchase.
+            if (choice2 == 1) {
+                amount = 0.925 * amount;		//determining the discount for industrial agencies
+            } else if (choice2 == 2){
+                amount = 0.915 * amount;	//determining the discount for government agencies
+            }
+        } else {							//determining the discount for over 100000 purchase
+            amount = 0.9 * amount;
+        }
+    }
+    var microProcessor = ("Type of microprocessor: ");		//Store choice 1 input in variable microProcessor
+    if (choice1 == 1) {
+        microProcessor = ("8-bit\n");		//Develop choices for different types of Micro Processors
+    } else {
+        if (choice1 == 2) {
+            microProcessor =("16-bit\n");		
+        } else {
+            microProcessor =("32-bit\n");		
+        }
+    }
+    var clientType =("Type of customer: ");		//Store choice 2 input in variable clientType
+    if (choice2 == 1) {
+        clientType=("Industrial\n");		//Develop choices for different types of Clients
+    } else {
+        if (choice2 == 2) {
+            clientType=("Government\n");
+        } else {
+            clientType=("University\n");
+        }
+    }
+	//Show Types of Clients, Net amount, Amount after discount and Types of processor.
+	document.write("Type of microprocessor: "+ microProcessor+ BR);
+    document.write("Type of Client: "+clientType+ BR);
+	document.write("Net Amount: " + total + BR);
+    document.write("Amount after discount: "+ amount + BR);
+  
+
+
+
+  </script>
+</body>
+
+</html>

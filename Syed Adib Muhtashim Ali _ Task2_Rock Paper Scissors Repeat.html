@@ -1,0 +1,113 @@
+<html>
+<head> </head>
+<body>
+<script type="text/javascript">
+//Program Name: Rock Paper Scissors Repeat Revisit
+//Purpose: Write a program that will allow the user to play Rock Paper Scissors and an option to repeat the game.
+//Author: Syed Adib Muhtashim Ali
+//Date Modified: 2021/06/22
+
+var continueAdding;
+var player1Ch;
+var player2Ch;
+var BR = "<br>";
+var choice;
+
+do
+{
+   
+   player1Ch = prompt("Enter choice of Player 1 (r=rock p=paper s=scissors) : ");
+
+   player2Ch = prompt("Enter choice of Player 2 (r=rock p=paper s=scissors) :");
+  
+
+if (player1Ch == 'r')
+{
+
+if (player2Ch == 's')
+{
+
+   document.write("You won " + " player1"+BR );
+}
+
+else if (player2Ch == 'r')
+{
+
+   document.write("You have tied, try again!"+BR );
+}
+else
+{
+
+   document.write("You won " + " player2"+BR );
+}
+}
+  
+  
+   
+if (player1Ch == 'p')
+{
+
+if (player2Ch == 'r')
+{
+
+document.write("You won " + " player1"+BR );
+}
+
+else if (player2Ch == 's')
+{
+
+document.write("You won " + " player2"+BR );
+}
+else
+{
+
+document.write("You have tied,try again!"+BR );
+}
+}
+
+   
+if (player1Ch == 's')
+{
+
+if (player2Ch == 'r')
+{
+
+document.write("you won " + " player2" +BR );
+}
+else if (player2Ch == 'p')
+{
+document.write("You won " + " player1"+BR );
+}
+else
+{
+document.write("You have tied, try again!"+BR );
+}
+}
+  
+  
+continueAdding =prompt("Would you like to play game again Yes - No :");
+if(continueAdding.toUpperCase().substr(0,1)==='Y')
+choice=true;
+else if (continueAdding.toUpperCase().substr(0,1)==='YES')
+choice=true;
+else
+choice=false;
+}while(choice==true);
+
+</script>
+
+</body>
+</html>
+			
+		
+
+		
+		
+
+   </script>
+
+   
+</body>
+
+
+</html>

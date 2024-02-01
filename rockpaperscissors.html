@@ -1,0 +1,76 @@
+<html>
+<head> </head>
+<body>
+<script type="text/javascript">
+	
+	
+	//Program name :Rock Paper Scissors
+	//Purpose: A game of rock Paper Scissors between 2 players which determines the winner
+	//Author: Syed Adib Muhtashim Ali
+	//Last Date Modified:June 1 2021
+	
+	//Declaring Variables
+	
+	var player1;
+	var player2;
+	var player1Ch;
+	var player2Ch;
+	
+	
+	//Display a message to ask players name
+	
+	
+	player1 = prompt("Enter name of Player 1");
+	player2 = prompt("Enter name of Player 2");
+	
+	//Display a message to ask for players choice
+	
+	player1Ch = prompt("Enter choice of Player 1 r=rock p=paper s=scissors");
+	player2Ch = prompt("Enter choice of Player 2 r=rock p=paper s=scissors");
+	
+
+
+	//Enter options for Rock
+		
+		if (player1Ch == 'r') {
+			if (player2Ch == 's') {
+				document.write("You win " + player1 );
+   } 			else if (player2Ch == 'r') {
+					document.write("You have tied, try again!");
+   } 			else {
+					document.write("You win " + player2 );
+   }
+}
+   
+   //Enter options for Paper
+   
+		if (player1Ch == 'p') {
+			if (player2Ch == 'r') {
+				document.write("You win " + player1 );
+   } 			else if (player2Ch == 's') {
+					document.write("You won " + player2);
+   }			 else {
+					document.write("You have tied,try again!");
+   }
+   
+   
+} 		
+		if (player1Ch == 's') {
+			if (player2Ch == 'r') {
+				document.write("you win " + player2 );	
+    } 			else if (player2Ch == 'p') {
+					document.write("You win " + player1);
+    }			 else {
+					document.write("You have tied, try again!");
+    }
+}
+
+
+
+   </script>
+
+   
+</body>
+
+
+</html>

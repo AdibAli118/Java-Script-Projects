@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+  
+  <script>
+//Program name :Eligibility to vacation
+//Purpose: Determining whether the customer is eligible for a free vacation 
+//Author: Syed Adib Muhtashim Ali
+//Date: 2021/6/27
+    
+    var wantToContinue;		// Declare a variable for continuation
+
+	var numVacations
+	var BR = "<br />";
+    function vacation() {                        // Function to perform the task
+      // Use prompt() method to ask user for values
+      //Declare Variables
+	  // Ask for customer name and store in variable
+      
+	  var customerName = prompt("Enter customer name");	// Ask for customer name and store in variable
+      
+	  // Ask for number of vacations through the agency and store in variable
+      
+	 var numVacations = prompt("Enter the number of vacations through the agency");
+      
+	  // Ask for number of booked hotel stay and store in variable
+      
+	  var numBookedHotelStay = prompt("Enter the number of booked hotel stay");
+      
+	  // Ask for number of booked flight tickets and store in variable
+      
+	  var numBookedFlightTickets = (prompt("Enter the number of booked flight tickets"));
+      
+	  // Ask for number of canceled reservation for flight or hotel and store in variable
+      
+	  var numCanclReservations =( prompt("Enter the  number of canceled reservations for flight or hotel"));
+
+      // Determine if the customer qualifies for a free vacation by using if-else conditions
+      // User will qualify for a free vacation if:-
+
+      if (numVacations >= 3 && (numBookedHotelStay >= 1 || numBookedFlightTickets >= 1) && numCanclReservations == 0) {
+        // User qualifies for a free vacation
+        document.write("Congratulations!, " + customerName + " you qualify for a free vacation."+BR);
+      } else {
+        // User does not qualify for a free vacation
+        document.write("Sorry!, " + customerName + " Unfortunately you don't qualify for a free vacation."+BR);
+      }
+      // Ask the user if he/she wants to continue
+      wantToContinue = prompt("Do you want to continue with other customer, Enter 'yes' for continue.");
+      // If user entered "yes", run function again
+      if (wantToContinue === "yes") {
+        vacation();
+      }
+    }
+
+    // Call the function
+    vacation();
+
+  </script>
+</body>
+
+</html>

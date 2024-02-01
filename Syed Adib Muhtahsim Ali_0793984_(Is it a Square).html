@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+		<script type="text/javascript">
+
+            //Program name: (Is it a square?)
+            //Program Purpose:(finding out the square numbers using binary search in a given range.)
+            //Date last modified:20/07/2021
+            //Author:Syed Adib Muhtashim Ali
+			
+            function BinarySearch(array, value)  {
+                var start = 0;
+                var end = array.length -1;              
+     
+                for (var i = 0; i < array.length; i++)   {
+                    var middle = (end - start)/2;
+                    if (array[i] == value)  {
+                        return true;
+                    }
+                    else if (array[middle] > value)  {
+                        end = middle - 1;
+                    }
+                    else{
+                        start = middle + 1;
+                    }
+                }
+                return false;
+            }
+                     
+            var SIZE = 500; //size of the array
+			
+			var Square = new Array(SIZE); //array holding TV shows
+			var br = "<br/>";
+			
+			for (var i = 0; i < SIZE; i++)
+			{
+				Square[i] = (i+1)*(i+1);
+			}
+			
+			var number = prompt("Enter a number between 0 and 250,000");
+            if(number==0){
+                document.write("0 is a square number.");
+            }
+            else{
+                if(number>=0 && number <=250000){
+                    var flag = BinarySearch(Square,number);
+                    if(flag==true){
+                        document.write(number+" is square number.");
+                    }
+                    else{
+                        document.write(number+" is not a square number.");
+                    }
+                }
+                else{
+                    
+                    document.write("The number is not between 0 and 250,000");
+                }
+            }
+            
+
+		</script>
+    </body>
+</html>

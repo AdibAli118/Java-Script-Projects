@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+		<script type="text/javascript">
+
+            //Program name: (Favorite Actor)
+            //Program Purpose:(Operating two arrays at the same time taking input from user)
+            //Date last modified:20/07/2021
+            //Author:Syed Adib Muhtashim Ali
+
+			var SIZE = 4; //size of the array
+			
+			var Actors = new Array(SIZE); //array holding Actors
+			var Roles = new Array(SIZE); //array holding Roles
+            var br = "<br/>";
+			
+			for (var i = 0; i < SIZE; i++)
+			{
+				Actors[i] = prompt("Enter the name your Favorite Actor #" + (i + 1)+" :-");
+                Roles[i] = prompt("Enter the role of the Actor #" + (i + 1)+" :-");
+			}
+			
+            var askActor = prompt("Enter the name of your favorite Actor :");
+			document.write("<h2>The Role of the Actor you entered : <h2>" + br);
+            var flag = 0; 
+			for (var i = 0; i < SIZE; i++)
+			{
+                var temp = Actors[i];
+                if(temp.toUpperCase()==askActor.toUpperCase()){
+                    document.write("<h2>" + Roles[i] + "<h2>" + br);
+                    flag = 1;
+                    break;
+                }
+                
+			}
+            if(flag==0){
+                document.write("The Actor you entered is not in your Favorite Actor's Array.");
+            }
+			
+		</script>
+    </body>
+</html>

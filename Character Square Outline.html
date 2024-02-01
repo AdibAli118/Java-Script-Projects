@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+		<style type="text/css">
+		body{font-family: “Courier New”;}</style>
+        <title><h1>Character Squares<h1></title>
+    </head>
+    <body>
+		<script type="text/javascript">
+		//Author: Syed Adib Muhtashim Ali
+		//Date Created: 23/7/21
+		//Program :Character Squares Outline
+		//Purpose :Printing a Square Outline based on user inputs rows and columns
+            
+			//declaring variables for rows columns where the characters and spaces are to be displayed
+            var character=prompt("Please enter the type of characters");
+            var rowsInput=prompt("Please enter the number of rows");
+            var columnInput=prompt("Please enter the number of columns");
+            var BR="</br>";
+            var space = " &nbsp";
+            
+			//running conditional loop to print columns
+			
+			for (var i=0; i<columnInput; i++)
+			{
+				document.write(character);
+			}
+            document.write(BR);
+			//running loop to ensure the spaces in between and characters for rows
+            for (var k=0; k<rowsInput-2; k++)
+			{
+                document.write(character);
+				for (var j=0; j<columnInput-2; j++)
+			    {
+				    document.write(space);
+			    }
+                document.write(character);
+                document.write(BR);
+			}
+			//running loop to print the characters in the column
+            for (var i=0; i<columnInput; i++)
+			{
+				document.write(character);
+			}
+            document.write(BR);
+		</script>
+    </body>
+</html>
